@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "SmartHotel",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"glcdfont.c": "cpp"
+		}
+	}
+}
