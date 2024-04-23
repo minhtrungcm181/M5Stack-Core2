@@ -10,11 +10,6 @@ Ticker tickerControlRelay;
 Ticker tickerWiFiCheck;
 Ticker tickerMQTTpublish;
 
-void display(int number) {
-  M5.Lcd.print(number);
-  M5.Lcd.print(" ");
-}
-
 void setup() 
 {
   Serial.begin(115200);

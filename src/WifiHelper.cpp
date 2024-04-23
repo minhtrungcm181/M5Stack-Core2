@@ -14,11 +14,12 @@ void checkWiFiStatus()
 {
   if(WiFi.status() == WL_CONNECTED)
   {
-    WiFiConnectFlag = true;;
+    WiFiConnectFlag = true;
   }
   else
   {
     WiFiConnectFlag = false;
+    WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
   }
 }

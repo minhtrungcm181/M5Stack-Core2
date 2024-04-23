@@ -124,7 +124,7 @@ void taskControlRelay()
   }
 }
 
-uint8_t couunterSend = 0;
+uint8_t counterSend = 0;
 String mes;
 void taskClientPublish()
 {
@@ -136,11 +136,12 @@ void taskClientPublish()
   mes += ",";
   mes += String(appow_str);
   mes += ",";
-  couunterSend ++;
-  if (couunterSend == 5)
+  counterSend ++;
+  if (counterSend == 5)
   {
     clientPublish("topic5", mes.c_str());
     mes = "";
+    counterSend = 0;
   }
 
 }

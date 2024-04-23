@@ -7,7 +7,12 @@
 	],
 	"settings": {
 		"files.associations": {
-			"glcdfont.c": "cpp"
+			"atomic": "cpp",
+			"optional": "cpp",
+			"new": "cpp",
+			"streambuf": "cpp",
+			"functional": "cpp",
+			"typeinfo": "cpp"
 		}
 	}
 }

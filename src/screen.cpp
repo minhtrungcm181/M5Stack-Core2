@@ -19,24 +19,26 @@ void updateScreen(){
 
   if (WiFiConnectFlag)
   {
-    M5.Lcd.fillRect(10, 190, 230, 30, BLACK);
-    M5.Lcd.setTextSize(2);
-    M5.Lcd.setTextColor(GREEN);
-    M5.Lcd.setCursor(10, 240);
-    M5.Lcd.printf("Connected to %s", ssid);
-
     if (MQTTConnectFlag)
     {
-      M5.Lcd.fillRect(10, 190, 230, 30, BLACK);
+      M5.Lcd.fillRect(10, 190, 320, 30, BLACK);
       M5.Lcd.setTextSize(2);
-      M5.Lcd.setTextColor(PURPLE);
-      M5.Lcd.setCursor(10, 240);
+      M5.Lcd.setTextColor(PINK);
+      M5.Lcd.setCursor(10, 190);
       M5.Lcd.printf("Connected to MQTT_Server", mqtt_server);
+    } 
+    else
+    {
+      M5.Lcd.fillRect(10, 190, 320, 30, BLACK);
+      M5.Lcd.setTextSize(2);
+      M5.Lcd.setTextColor(GREEN);
+      M5.Lcd.setCursor(10, 190);
+      M5.Lcd.printf("Connected to %s", ssid);
     }
   }
   else
   {
-    M5.Lcd.fillRect(10, 190, 230, 30, BLACK);
+    M5.Lcd.fillRect(10, 190, 320, 30, BLACK);
     M5.Lcd.setTextSize(2);
     M5.Lcd.setTextColor(RED);
     M5.Lcd.setCursor(10, 190);

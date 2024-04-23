@@ -14,7 +14,6 @@ char vol_str[10] = "0",
       appow_str[10] = "0", 
       kwh_str[10] = "0";
 
-String mes;
 
 void updateACinfor()
 {
