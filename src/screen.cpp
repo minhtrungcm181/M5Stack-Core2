@@ -38,6 +38,7 @@ void updateScreen(){
   }
   else
   {
+    Serial.print("false");
     M5.Lcd.fillRect(10, 190, 320, 30, BLACK);
     M5.Lcd.setTextSize(2);
     M5.Lcd.setTextColor(RED);

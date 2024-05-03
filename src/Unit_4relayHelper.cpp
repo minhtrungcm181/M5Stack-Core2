@@ -24,27 +24,35 @@ void controlRelay()
     break;
   case ON_RELAY_1:
     relay.relayWrite(RELAY_1, ON_SIGNAL);
+    relay.ledWrite(RELAY_1, ON_SIGNAL);
     break;
   case OFF_RELAY_1:
     relay.relayWrite(RELAY_1, OFF_SIGNAL);
+    relay.ledWrite(RELAY_1, OFF_SIGNAL);
     break;
   case OFF_RELAY_2:
     relay.relayWrite(RELAY_2, OFF_SIGNAL);
+    relay.ledWrite(RELAY_2, OFF_SIGNAL);
     break;
   case ON_RELAY_2:
     relay.relayWrite(RELAY_2, ON_SIGNAL);
+    relay.ledWrite(RELAY_2, ON_SIGNAL);
     break;
   case OFF_RELAY_3:
     relay.relayWrite(RELAY_3, OFF_SIGNAL);
+    relay.ledWrite(RELAY_3, OFF_SIGNAL);
     break;
   case  ON_RELAY_3:
     relay.relayWrite(RELAY_3, ON_SIGNAL);
+    relay.ledWrite(RELAY_3, ON_SIGNAL);
     break;
   case OFF_RELAY_4:
     relay.relayWrite(RELAY_4, OFF_SIGNAL);
+    relay.ledWrite(RELAY_4, OFF_SIGNAL);
     break;
   case ON_RELAY_4:
     relay.relayWrite(RELAY_4, ON_SIGNAL);
+    relay.ledWrite(RELAY_4, ON_SIGNAL);
     break;
   default:
     printf("Invalid state!!");
@@ -60,9 +68,11 @@ void controlALL()
     break;
   case OFF_ALL:
     relay.relayAll(OFF_SIGNAL);
+    // relay.ledAll(OFF_SIGNAL);
     break;
   case ON_ALL:
     relay.relayAll(ON_SIGNAL);
+    // relay.ledAll(ON_SIGNAL);
     break;
   default:
     printf("Invalid state!!");
