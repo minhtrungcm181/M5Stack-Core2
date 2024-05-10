@@ -2,20 +2,52 @@
 #include <screen.h>
 
 void updateScreen(){
-  M5.Lcd.fillRect(155, 25, 200, 150, BLACK);
+  M5.Lcd.fillRect(160, 30, 200, 150, BLACK);
 
   M5.Lcd.setTextSize(3);
   M5.Lcd.setTextColor(YELLOW);
   M5.Lcd.drawFloat(voltage, 2, 160, 30);
+  if (relay_1_state) 
+  {
+    M5.Lcd.fillCircle(300, 40, 15, GREEN);
+  } 
+  else 
+  {
+    M5.Lcd.fillCircle(300, 40, 15, RED);
+  }
 
   M5.Lcd.setTextColor(CYAN);
   M5.Lcd.drawFloat(current, 2, 160, 70);
+  if (relay_2_state) 
+  {
+    M5.Lcd.fillCircle(300, 80, 15, GREEN);
+  } 
+  else 
+  {
+    M5.Lcd.fillCircle(300, 80, 15, RED);
+  }
 
   M5.Lcd.setTextColor(YELLOW);
   M5.Lcd.drawFloat(power, 2, 160, 110);
+  if (relay_3_state) 
+  {
+    M5.Lcd.fillCircle(300, 120, 15, GREEN);
+  }
+  else 
+  {
+    M5.Lcd.fillCircle(300, 120, 15, RED);
+  }
 
   M5.Lcd.setTextColor(CYAN);
   M5.Lcd.drawFloat(kwh, 2, 160, 150);
+  if (relay_4_state)
+  {
+    M5.Lcd.fillCircle(300, 160, 15, GREEN);
+  }
+  else
+  {
+    M5.Lcd.fillCircle(300, 160, 15, RED);
+  }
 
   if (WiFiConnectFlag)
   {
