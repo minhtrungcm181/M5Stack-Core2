@@ -4,7 +4,7 @@
 extern float voltage,
       current, 
       power, 
-      appower, 
+      appower,
       kwh;
 
 extern char vol_str[10], 

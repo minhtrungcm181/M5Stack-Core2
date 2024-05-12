@@ -127,7 +127,8 @@ void taskControlRelay()
 uint8_t counterSend = 0;
 String mes;
 void taskClientPublish()
-{
+{ 
+  mes += '"';
   mes += String(vol_str);
   mes += ",";
   mes += String(cur_str);
@@ -136,8 +137,10 @@ void taskClientPublish()
   mes += ",";
   mes += String(appow_str);
   mes += ",";
+  mes += String(kwh_str);
+  mes += '"';
   counterSend ++;
-  if (counterSend == 5)
+  if (counterSend == 1)
   {
     clientPublish("topic5", mes.c_str());
     mes = "";

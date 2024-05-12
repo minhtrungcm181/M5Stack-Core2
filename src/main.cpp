@@ -34,7 +34,7 @@ void setup()
   tickerUpdateACinfor.attach_ms(211,taskUpdateACinfor);
   tickerUpdateScreen.attach_ms(1023, taskUpdateScreen);
   tickerControlRelay.attach_ms(53, taskControlRelay);
-  tickerMQTTpublish.attach_ms(1013, taskClientPublish);
+  tickerMQTTpublish.attach_ms(3013, taskClientPublish);
 }
 void loop() 
 {
@@ -43,5 +43,5 @@ void loop()
     checkConnectMQTT();
     clientLoop(); 
   }
-  delay (100);
+  delay (1000);
 }

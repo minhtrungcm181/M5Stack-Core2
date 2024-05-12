@@ -15,7 +15,7 @@ void updateScreen(){
   M5.Lcd.drawFloat(power, 2, 160, 110);
 
   M5.Lcd.setTextColor(CYAN);
-  M5.Lcd.drawFloat(kwh, 2, 160, 150);
+  M5.Lcd.drawFloat(appower, 2, 160, 150);
 
   if (WiFiConnectFlag)
   {
@@ -60,10 +60,10 @@ void initialScreen()
   M5.Lcd.drawString("Current(mA):", 10, 70);
 
   M5.Lcd.setTextColor(YELLOW);
-  M5.Lcd.drawString("Power(W):", 10, 110);
+  M5.Lcd.drawString("TrueP:", 10, 110);
 
   M5.Lcd.setTextColor(CYAN);
-  M5.Lcd.drawString("KWM:", 10, 150);
+  M5.Lcd.drawString("Power(W):", 10, 150);
 
   M5.Lcd.setTextSize(2);
   M5.Lcd.setTextColor(RED);

@@ -6,9 +6,9 @@ PubSubClient client(espClient);
 bool WiFiConnectFlag = false;
 bool MQTTConnectFlag = false;
 
-const char* ssid        = "ACLAB";
-const char* password    = "ACLAB2023";
-const char* mqtt_server = "172.28.182.38";
+const char* ssid        = "RD-SEAI_2.4G";
+const char* password    = "";
+const char* mqtt_server = "172.28.182.71";
 
 void checkWiFiStatus()
 {
