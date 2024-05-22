@@ -5,7 +5,6 @@
 
 Ticker tickerUpdateScreen;
 Ticker tickerUpdateACinfor;
-Ticker tickerBtnUpdate;
 Ticker tickerControlRelay;
 Ticker tickerWiFiCheck;
 Ticker tickerMQTTpublish;
@@ -14,7 +13,7 @@ void setup()
 {
   Serial.begin(115200);
   M5.begin(true, false, true, true, kMBusModeInput, false);
-  M5.Lcd.begin();
+  // M5.Lcd.begin();
   tca9548a.address(PaHub_I2C_ADDRESS);
   switchChanel_3();
   relay.begin();

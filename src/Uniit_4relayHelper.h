@@ -33,6 +33,11 @@ extern bool all_flag;
 extern uint8_t relayState;
 extern uint8_t ALLrelayState;
 
+extern bool relay_1_state;
+extern bool relay_2_state;
+extern bool relay_3_state;
+extern bool relay_4_state;
+
 void controlRelay();
 void controlALL();
 void setupRelay();
